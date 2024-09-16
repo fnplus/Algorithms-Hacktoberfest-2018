@@ -14,6 +14,7 @@ This is a repo created to remember the Hacktober Fest organized by Github, Digit
 - [Ema Fazillah](https://github.com/emafazillah) | [No school](https://twitter.com/hashtag/noschool?lang=en)
 - [Shubham Verma](https://github.com/shubhamvrm) | [Jamia Millia Islamia](https://www.jmi.ac.in)
 - [Abhinav Akhil](https://github.com/abhinavakhil)
+- [Joydeep Paul] (https://github.com/jdpaul25)
 
 _Please follow the github Markdown format strictly else PR request might get neglected._
 _Change the demo details and enter your details there, make sure to leave a demo markdown code there for other as it was before._
