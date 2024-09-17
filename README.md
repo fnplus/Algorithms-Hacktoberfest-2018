@@ -7,7 +7,7 @@
 This repository is a part of [HacktoberFest -an event organised by DigitalOcean](https://hacktoberfest.digitalocean.com/). 
 You are requested to create your profile using the above link to be a part of it.
 
-This repository contains examples of various algorithms written on different programming languages...
+This repository contains examples of various algorithms written on different programming languages including C++, Python etc...
 
 ## Contributors
 
