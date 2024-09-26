@@ -1,0 +1,38 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+int Knapsack(int *wts,int *price,int n,int capacity){
+    if(capacity==0 || n==0){
+        return 0;
+    }
+    int inc=0,exc=0;
+    if(wts[n-1]<=capacity){
+    inc=price[n-1]+Knapsack(wts,price,n-1,capacity-wts[n-1]);
+    }
+    exc=0+Knapsack(wts,price,n-1,capacity);
+    return max(inc,exc);
+
+}
+
+int main(){
+    int n ;
+    int price[1000];
+    int wts[1000];
+    int capacity;
+    cout<<"Enter the number of items :";
+    cin>>n;
+    cout<<"Enter the price of items :";
+    for(int i=0;i<n;i++){
+        cin>>price[i];
+    }
+    cout<<"Enter the weights of items :";
+    for(int i=0;i<n;i++){
+        cin>>wts[i];
+    }
+    cout<<"Enter the capacity :";
+    cin>>capacity;
+    cout<<Knapsack(wts,price,n,capacity)<<endl;
+
+
+    return 0;
+}
