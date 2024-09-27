@@ -1,0 +1,7 @@
+  public void inorderTraversal(TreeNode node) { 
+        if (node == null) return; 
+
+        inorderTraversal(node.left); 
+        System.out.print(node.val + " "); 
+        inorderTraversal(node.right); 
+} 
