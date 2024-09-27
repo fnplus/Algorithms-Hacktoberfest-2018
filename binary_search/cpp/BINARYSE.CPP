@@ -1,11 +1,11 @@
 #include"header.cpp"
 
-int Binarysearch(int a[],int n,int e)
+long Binarysearch(long a[],long n,long e)
 {
-int beg=0,end=n-1,mid=0;
-while(beg<=end)
+long beg=0,end=n-1,mid=0;
+while(beg<end)
 {
-mid=(beg+end)/2;
+mid=beg +(end-beg)/2;
 if(a[mid]==e)
 return mid;
 else if(a[mid]<e)
@@ -16,9 +16,9 @@ end=mid-1;
 return -1;
 }
 
-void bubblesort(int x[],int n)
+void bubblesort(long x[],long n)
 {
-int temp=0,i=0,j=0;
+long temp=0,i=0,j=0;
 for(i=0;i<n;i++)
 {
 for(j=0;j<n-1-i;j++)
@@ -36,17 +36,17 @@ x[j+1]=temp;
 void main()
 {
 clrscr();
-int e=0,n=0,x[100];
+long e=0,n=0,x[100];
 cout<<"Enter number of elements in array";
 cin>>n;
 cout<<"Enter elements of array";
-for(int i=0;i<n;i++)
+for(long i=0;i<n;i++)
 cin>>x[i];
 cout<<"Enter element to be searched";
 cin>>e;
 bubblesort(x,n);
 
-int k=Binarysearch(x,n,e);
+long k=Binarysearch(x,n,e);
 if(k>=0)
 cout<<"Element found at position- "<<k;
 else
