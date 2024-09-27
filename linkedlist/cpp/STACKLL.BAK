@@ -1,0 +1,77 @@
+#include"header.cpp"
+
+struct stack
+{
+int x;
+stack *next;
+}*top=NULL;
+
+void push(int e)
+{
+stack *n=NULL;
+n=new stack;
+if(n==NULL)
+{
+cout<<"Node not created";
+getch();
+return;
+}
+n->x=e;
+n->next=top;
+top=n;
+}
+
+void pop()
+{
+if(top==NULL)
+{
+cout<<"Stack underflow";
+getch();
+return;
+}
+stack *n=top;
+n=n->next;
+delete n;
+}
+
+void traverse()
+{
+if(top==NULL)
+{
+cout<<"Stack underflow";
+getch();
+return;
+}
+stack *n=top;
+while(n!=NULL)
+{
+cout<<n->x;
+n=n->next;
+}
+}
+
+void main()
+{
+clrscr();
+int e=0,ch=0;
+do
+{
+cout<<"1.Push     2.Pop     3.Traverse     4.Exit";
+cin>>ch;
+switch(ch)
+{
+case 1:
+cin>>e;
+push(e);
+break;
+case 2:
+pop();
+break;
+case 3:
+traverse();
+break;
+case 4:
+return;
+}
+}while(1);
+}
